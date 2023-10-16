@@ -135,7 +135,7 @@ if option == 1:
     t1Exp = 't_1=[' + ','.join(map(str, triangles[0])) + ']'
     t2Exp = 't_2=[' + ','.join(map(str, triangles[1])) + ']'
     t3Exp = 't_3=[' + ','.join(map(str, triangles[2])) + ']'
-    consLatex = '\\left[\\operatorname{triangle}\\left(\\left(v_{1}\\left[t_{1}\\left[x\\right]\\right],v_{2}\\left[t_{1}\\left[x\\right]\\right],v_{3}\\left[t_{1}\\left[x\\right]\\right]\\right),\\left(v_{1}\\left[t_{2}\\left[x\\right]\\right],v_{2}\\left[t_{2}\\left[x\\right]\\right],v_{3}\\left[t_{2}\\left[x\\right]\\right]\\right),\\\\left(v_{1}\\left[t_{3}\\left[x\\right]\\right],v_{2}\\left[t_{3}\\left[x\\right]\\right],v_{3}\\left[t_{3}\\left[x\\right]\\right]\\right)\\right)\\operatorname{for}x=\\left[1,...,' + str(len(vertices[0])) + '\\right]\\right]'
+    consLatex = '\\left[\\operatorname{triangle}\\left(\\left(v_{1}\\left[t_{1}\\left[x\\right]\\right],v_{2}\\left[t_{1}\\left[x\\right]\\right],v_{3}\\left[t_{1}\\left[x\\right]\\right]\\right),\\left(v_{1}\\left[t_{2}\\left[x\\right]\\right],v_{2}\\left[t_{2}\\left[x\\right]\\right],v_{3}\\left[t_{2}\\left[x\\right]\\right]\\right),\\left(v_{1}\\left[t_{3}\\left[x\\right]\\right],v_{2}\\left[t_{3}\\left[x\\right]\\right],v_{3}\\left[t_{3}\\left[x\\right]\\right]\\right)\\right)\\operatorname{for}x=\\left[1,...,' + str(len(vertices[0])) + '\\right]\\right]'
     combined = v1Exp + '\n' + v2Exp + '\n' + v3Exp + '\n' + t1Exp + '\n' + t2Exp + '\n' + t3Exp + '\n' + consLatex
     if havePyperclip:
         pyperclip.copy(combined)
