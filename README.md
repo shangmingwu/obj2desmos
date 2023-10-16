@@ -1,4 +1,5 @@
 # obj2desmos
+
 A script for converting a Wavefront .obj file into a format suitable for rendering in [3D Desmos](https://www.desmos.com/3d).
 
 Clone the repository somewhere convenient, and optionally install `pyperclip` to support clipboard insertion.
@@ -11,10 +12,11 @@ git clone https://github.com/shangmingwu/obj2desmos.git
 ## Usage
 
 ```
-python port-obj.py [-cdf] [path to .obj file]
+python obj2desmos.py [-cdf] [path to .obj file]
 ```
 
 Options:
+
 - `-c`: print console commands to stdout
 - `-d`: copy equations directly to clipboard
 - `-f`: print console commands to a file
