@@ -119,11 +119,11 @@ def parse_obj(file: TextIOWrapper) -> tuple[XYZLists[str], XYZLists[int]]:
             t3 = int(line[2].split("/")[0])
 
             if t1 < 0:
-                t1 += len(vertices.x)
+                t1 += len(vertices.x) + 1
             if t2 < 0:
-                t2 += len(vertices.x)
+                t2 += len(vertices.x) + 1
             if t3 < 0:
-                t3 += len(vertices.x)
+                t3 += len(vertices.x) + 1
 
             triangles.x.append(t1)
             triangles.y.append(t2)
@@ -146,7 +146,7 @@ def main():
 
     cons_latex = (
         r"\\left[\\operatorname{triangle}\\left(\\left(v_{1}\\left[t_{1}\\left[x\\right]\\right],v_{2}\\left[t_{1}\\left[x\\right]\\right],v_{3}\\left[t_{1}\\left[x\\right]\\right]\\right),\\left(v_{1}\\left[t_{2}\\left[x\\right]\\right],v_{2}\\left[t_{2}\\left[x\\right]\\right],v_{3}\\left[t_{2}\\left[x\\right]\\right]\\right),\\left(v_{1}\\left[t_{3}\\left[x\\right]\\right],v_{2}\\left[t_{3}\\left[x\\right]\\right],v_{3}\\left[t_{3}\\left[x\\right]\\right]\\right)\\right)\\operatorname{for}x=\\left[1,...,"
-        + str(len(vertices.x))
+        + str(len(triangles.x))
         + r"\\right]\\right]"
     )
 
